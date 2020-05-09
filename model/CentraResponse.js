@@ -14,7 +14,8 @@ module.exports = class CentraResponse {
 	}
 
 	async json () {
-		return JSON.parse(this.body)
+	    try { return JSON.parse(this.body) }
+            catch (ex) { console.error("JSON parsing error: ", this.body.toString()); return { success: false, cause: 'JSON parse failure', data: this.body.toString} ; }
 	}
 
 	async text () {
