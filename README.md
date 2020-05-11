@@ -2,6 +2,8 @@
 
 > The core lightweight HTTP client for Node
 
+This is a fork of ethanent/centra with minor change to fix error handling for non-json responses.
+
 [GitHub](https://github.com/ethanent/centra) | [NPM](https://npmjs.com/package/centra)
 
 ## Install
